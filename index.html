@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zee's Movies - Premium Movie Rentals</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <i class="fas fa-film"></i>
+      <h1>Zee's Movies</h1>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#movies">Movies</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="cart">
+      <button id="cart-btn">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </button>
+    </div>
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1 class="animate-fade-in">Welcome to Zee's Movies</h1>
+      <p class="animate-fade-in delay-1">Your premier destination for quality movie rentals. Stream at home or download for your journey.</p>
+      <div class="buttons animate-fade-in delay-2">
+        <button class="btn primary" id="browse-btn">Browse Movies</button>
+        <button class="btn secondary" id="learn-btn">Learn More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Movies Section -->
+  <section id="movies" class="movies">
+    <div class="section-header">
+      <h2>Featured Movies</h2>
+      <div class="tabs">
+        <button class="tab-btn active" data-category="all">All Movies</button>
+        <button class="tab-btn" data-category="new">New Releases</button>
+        <button class="tab-btn" data-category="popular">Popular</button>
+        <button class="tab-btn" data-category="classic">Classics</button>
+      </div>
+    </div>
+    
+    <div class="movie-slider">
+      <button class="slider-btn prev" id="prev-btn"><i class="fas fa-chevron-left"></i></button>
+      <div class="movie-grid" id="movie-grid">
+
+      </div>
+      <button class="slider-btn next" id="next-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- Registration Form -->
+  <section id="register" class="register">
+    <div class="form-container">
+      <h2>Create an Account</h2>
+      <p>Join Zee's Movies for exclusive deals and faster checkouts!</p>
+      <form id="register-form">
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" required>
+          <span class="error-message" id="name-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+          <span class="error-message" id="email-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+          <span class="error-message" id="password-error"></span>
+          <div class="password-strength" id="password-strength">
+            <span class="strength-bar"></span>
+            <span class="strength-text">Password strength</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm-password" required>
+          <span class="error-message" id="confirm-password-error"></span>
+        </div>
+
+        <button type="submit" class="btn primary full-width">Create Account</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Modal Popup -->
+  <div class="modal" id="movie-modal">
+    <div class="modal-content">
+      <span class="close-btn" id="close-modal">&times;</span>
+      <div class="modal-body" id="modal-body">
+        <!-- Content will be added here via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notifications -->
+  <div class="toast-container" id="toast-container">
+    <!-- Toasts will be added here via JavaScript -->
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Zee's Movies</h3>
+        <p>Your premier destination for quality movie rentals. Browse, rent, and enjoy the best cinema has to offer.</p>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#movies">Movies</a></li>
+          <li><a href="#register">Account</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Comedy</a></li>
+          <li><a href="#">Horror</a></li>
+          <li><a href="#">Sci-Fi</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <ul>
+          <li>Email: info@zeemovies.com</li>
+          <li>Phone: +27 10 123 4567</li>
+          <li>Address: 123 Cinema Street, Cape Town</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Zee's Movies. All rights reserved.</p>
+      <p><span>Terms of Service</span> • <span>Privacy Policy</span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
